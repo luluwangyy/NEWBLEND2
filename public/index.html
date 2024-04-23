@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Image Blend App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Welcome to the Image Blend App</h1>
+
+<!-- Login Form -->
+<div>
+    <h2>Login</h2>
+    <form id="loginForm">
+        Username: <input type="text" name="username" required><br>
+        Password: <input type="password" name="password" required><br>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<!-- Image Prompt Submission Form -->
+<div style="display:none;" id="promptForm">
+    <h2>Submit Your Prompt</h2>
+    <form>
+        Prompt: <input type="text" name="prompt" required><br>
+        <button type="button" onclick="submitPrompt()">Submit Prompt</button>
+    </form>
+</div>
+
+
+
+<script src="app.js"></script>
+
+<!-- Image Display Area -->
+<div id="imageDisplay" style="text-align: center;">
+    <img id="imageOutput" src="" alt="Generated Image" style="max-width: 90%; display: none;">
+</div>
+
+</body>
+</html>
+<style>
+    #imageDisplay {
+        text-align: center;
+        margin-top: 20px;
+    }
+    #imageOutput {
+        max-width: 90%;
+        display: none; /* Hidden by default, shown only after loading an image */
+    }
+</style>
